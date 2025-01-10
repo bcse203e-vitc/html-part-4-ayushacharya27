@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Form</title>
+</head>
+<body>
+  <h2>Hotel Booking Form</h2>
+  <form id="hotelBookingForm">
+ 
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+ 
+    <label for="contactInfo">Contact Information:</label><br>
+    <input type="email" id="contactInfo" name="contactInfo" placeholder="Enter your email" required><br><br>
+
+ 
+    <label for="checkInDate">Check-in Date:</label><br>
+    <input type="date" id="checkInDate" name="checkInDate" required><br><br>
+
+ 
+    <label for="checkOutDate">Check-out Date:</label><br>
+    <input type="date" id="checkOutDate" name="checkOutDate" required><br><br>
+
+ 
+    <label for="numGuests">Number of Guests:</label><br>
+    <input type="number" id="numGuests" name="numGuests" min="1" value="1" required><br><br>
+
+   
+    <label for="roomType">Room Type:</label><br>
+    <select id="roomType" name="roomType" required>
+      <option value="100">Single</option>
+      <option value="200">Double</option>
+      <option value="300">Suite</option>
+    </select><br><br>
+
+ 
+    <label>Additional Services:</label><br>
+    <input type="checkbox" id="breakfast" name="services" value="50">
+    <label for="breakfast">Breakfast (₹50)</label><br>
+    <input type="checkbox" id="airportPickup" name="services" value="150">
+    <label for="airportPickup">Airport Pickup (₹150)</label><br><br>
+
+ 
+    <div id="totalCostSection">
+      <button type="button" onclick="calculateTotal()">Calculate Total Cost</button>
+      <p>Total Cost: ₹<span id="totalCost">0</span></p>
+    </div>
+
+   
+    <button type="submit">Book Now</button>
+  </form>
+
+   
+</body>
+</html>
